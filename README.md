@@ -69,7 +69,7 @@ response = requests.get(
     params={
         "query": "https://npiregistry.cms.hhs.gov/provider-view/1972813608",
     },
-    timeout=60,
+    timeout=120,
 )
 response.raise_for_status()
 data = response.json()
@@ -283,7 +283,7 @@ response = requests.get(
     params={
         "query": "Anthony Fauci. Also a 10-digit NPI such as 1972813608, or an NPPES search URL. With enumeration_type=NPI-2 this text is the organization name, for example Mayo Clinic. A provider-view URL is rejected here.",
     },
-    timeout=60,
+    timeout=120,
 )
 response.raise_for_status()
 data = response.json()
